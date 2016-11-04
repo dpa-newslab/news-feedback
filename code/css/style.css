@@ -1,0 +1,333 @@
+.navbar {
+    min-height: 27px;
+    background-color: #f9f9f9;
+    margin-bottom: 0px;
+}
+.navbar-inverse {
+    background-image: linear-gradient(to bottom, #f9f9f9 0px, #f9f9f9 100%);
+    background-repeat: repeat-x;
+    border-radius: 0px;
+    background-color: #f9f9f9;
+    border-bottom: 4px solid #86d861;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #666;
+}
+.navbar-toggle .icon-bar {
+    background-color: red;
+    border-radius: 0;
+    display: block;
+    height: 4px;
+    width: 30px;
+}
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #b4b4b4;
+}
+.navbar-inverse .navbar-toggle {
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+}
+.navbar-inverse .navbar-toggle:focus,.navbar-inverse .navbar-toggle:hover {
+    background-color: transparent;
+    background-image: none;
+
+}
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+    color: #576b61;
+    cursor: pointer;
+}
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover {
+    color: #576b61;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .open > a {
+    background-image: linear-gradient(to bottom, #b4b4b4 0px, #b4b4b4 100%);
+    background-repeat: repeat-x;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25) inset;
+}
+.col-md-12 {
+    margin: 0px;
+    margin-bottom: 150px;
+    padding: 0;
+}
+.navbar-toggle {
+    float: left;
+}
+.navbar-select {
+    float: right;
+    margin-top: 18px;
+    margin-right: 12px;
+    margin-bottom: 16px;
+}
+
+.info {
+    cursor: pointer;
+    color: #576b61;
+    float: right;
+    margin-top: 20px;
+    margin-right: 12px;
+    margin-bottom: 16px;
+
+}
+.modal-header {
+    border-bottom: 0 solid #e5e5e5;
+    padding: 5px 10px 0 0;
+}
+.modal-body{
+    padding-top: 0px;
+}
+
+.modal-body h2 {
+    padding-top: 0px;
+    font-size: 20px;
+    margin-top: 0;
+}
+
+
+.page-header {
+    border-bottom: 0 solid #eee;
+    margin: 0px 0 20px;
+    padding-bottom: 9px;
+}
+.line_bold {
+    border-color: #5f7b6d;
+    border-style: solid none none;
+    border-width: 3px 0 0;
+}
+
+#email_btn {
+    display: none;
+    background-color: #f9f9f9;
+    width: 270px;
+    height: 40px;
+    padding: 5px;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    border-top: 4px solid #86d861;
+}
+#email_btn .email {
+    font-size: 12px;
+    line-height: 1.1;
+    display: block;
+    padding-bottom: -10px;
+}
+#email_btn .btn {
+    right:10px;
+    top:5px;
+    position: absolute;
+    color:green;
+}
+.tab-content{
+    padding-top: 10px;
+}
+#download button {
+    color:  #5f7b6d;
+}
+#copy_btn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.panel {
+    background-color: #fff;
+    border: 0px solid transparent;
+    border-radius: 0px;
+    margin-bottom: 3px;
+    box-shadow: 0 3px 0px rgba(0, 0, 0, 0.25) inset;
+    cursor: pointer;
+}
+.panel-body {
+    border-bottom: 1px solid #f5f5f5;
+}
+.panel-body a {
+    color: #576b61;
+}
+.panel-body a:hover {
+    color: #576b61;
+    text-decoration: none;
+}
+.panel-heading {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.panel-heading a {
+    color: #576b61;
+}
+.panel-heading a:hover {
+    text-decoration:none;
+}
+.panel-default > .panel-heading {
+    background-image: linear-gradient(to bottom, #fff 0px, #f5f5f5 100%);
+    background-repeat: repeat-x;
+}
+.selectbox {
+    float: right;
+    position: relative;
+    bottom: 23px;
+    cursor: pointer;
+    margin-right: 2px;    
+    width:18px;
+    height:15px;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.selectbox {
+    background-image: url("../img/off.png");
+}
+.selectbox.active {
+    background-image: url("../img/on.png");
+}
+.selectbox:hover {
+    background-image: url("../img/on.png");
+}
+.note{
+    float: right;
+    position: relative;
+    bottom: 23px;
+    cursor: pointer;   
+    width:60px;
+    padding: 0px;
+    font-size: 12px;
+    margin: 0;
+    margin-right: -60px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+}
+.panel-title {
+    margin-right: 50px;
+    font-size: 20px;
+    color: #576b61;
+}
+.panel-title a:hover {
+    color: #576b61;
+}
+.panel-title a:hover {
+    text-decoration: none;
+    color: #576b61;
+}
+.panel-title a:focus {
+    text-decoration: none;
+    color: #576b61;
+}
+.dpa_teaser{
+    line-height: 1;
+}
+#selected {
+    vertical-align: middle;
+    font-size: 14px;
+    padding-top: 30px;
+    padding-left: 0px;
+    color: #9d9d9d;
+}
+#selectedBig {
+    font-size: 12px;
+    padding-left: 0px;
+    color: #9d9d9d;
+    cursor: default;
+    float: left;
+    margin-top: 20px;   
+}
+#appTitle {
+    font-size: 20px;
+    padding-left: 0px;
+    color: #576b61;
+    cursor: pointer;      
+    float: left;
+    margin-top: 12px;        
+}
+.navbar img {
+    width: 120px;
+}
+
+.logo_small_big {
+    padding-top: 7px;
+}
+.start {
+    padding-left: 50px;
+}
+.logo_wide {
+    padding-bottom: 15px;
+}
+#nav_all {
+    display: none;
+}
+.navbar-header, .navbar-nav  {
+    display: block;
+}
+.logo_small, .logo_small_big {
+    cursor: pointer;
+}
+
+@media screen and (min-width: 760px) {
+    .navbar-header,.navbar-nav  {
+        display: none;
+    }
+    #nav_all {
+        display: block;
+        position: absolute;
+        top: 55px;
+        left: 0px;
+        width:230px;
+        background-color: #fff;
+    }
+    #dpa_main {
+        padding-left: 230px;
+    }
+    #navbar .logo_small_big, #selectedBig, #navbar .navbar-select {
+        display: inline;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    #navbar .logo_small_big, #selectedBig, #navbar .navbar-select,#navbar .info, #appTitle {
+        display: none;
+    }
+}
+
+/*****nav wide*************************/
+
+.nav-pills > li > a {
+    cursor: pointer;
+    border-radius: 0px;
+    padding: 5px 15px;
+    color: #576b61;
+}
+.active a,.active a:hover {
+    background-image: linear-gradient(to bottom, #b4b4b4 0px, #b4b4b4 100%);
+    background-repeat: repeat-x;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25) inset;
+    color: #fff;
+}
+.nav-pills> li > a:hover{
+    background-image: linear-gradient(to bottom, #b4b4b4 0px, #b4b4b4 100%);
+    background-repeat: repeat-x;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25) inset;
+    color: #fff;
+}
+.nav-stacked > li + li {
+    margin-top: 0;
+}
+.nav-pills > li  {
+    background-image: linear-gradient(to bottom, #fff 0px, #f5f5f5 100%);
+    background-repeat: repeat-x;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu > .disabled > a, .dropdown-menu > .disabled > a:focus, .dropdown-menu > .disabled > a:hover {
+    color: #ccc;
+    cursor: not-allowed;
+}
+.nav > li.disabled > a {
+    color: #ccc;
+}
+.navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover {
+    color: #ccc;
+    cursor: not-allowed;
+}
+.container {
+    width:auto;
+}
