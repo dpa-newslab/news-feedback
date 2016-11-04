@@ -60,7 +60,7 @@ $(document).ready(function () {
         }
     }
 
-    $.getJSON("http://" + url_hash + "index.json?123", function (data) {
+    $.getJSON("://" + url_hash + "index.json?123", function (data) {
         rootlabel = data.title;
         var first_element = true;
         $(".modal-body").html(data.description);
