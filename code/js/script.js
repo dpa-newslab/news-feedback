@@ -60,7 +60,7 @@ $(document).ready(function () {
         }
     }
 
-    $.getJSON("://" + url_hash + "index.json?123", function (data) {
+    $.getJSON("//" + url_hash + "index.json?123", function (data) {
         rootlabel = data.title;
         var first_element = true;
         $(".modal-body").html(data.description);
@@ -109,7 +109,7 @@ $(document).ready(function () {
         $("#nav_all ul li").remove();
         $(".dropdown-menu li").remove();
 
-        $.getJSON("http://" + url_hash + date_data, function (data) {
+        $.getJSON("//" + url_hash + date_data, function (data) {
             var nav_wide = "";
             var i = 0;
             var deeplink_caption = "";
@@ -171,7 +171,7 @@ $(document).ready(function () {
             if (e.target.className === "dpa_teaser" || e.target.className === "panel-title" || e.target.className === "panel-date") {
                 var temp_id = $("#" + e.target.parentNode.id).find("a").get(1).id;
                 $("#collapse" + e.target.parentNode.id).collapse('toggle');
-                $.getJSON("http://" + url_hash + temp_id, function (data) {
+                $.getJSON("//" + url_hash + temp_id, function (data) {
                     $("#collapse" + e.target.parentNode.id + " div").text(data.text);
                     parent.location.hash = url_hash + temp_id;
                 });
@@ -179,14 +179,14 @@ $(document).ready(function () {
             if (e.target.className === "panel-heading accordion-toggle") {
                 var temp_id = $("#" + e.target.id).find("a").get(1).id;
                 $("#collapse" + e.target.id).collapse('toggle');
-                $.getJSON("http://" + url_hash + temp_id, function (data) {
+                $.getJSON("//" + url_hash + temp_id, function (data) {
                     $("#collapse" + e.target.id + " div").text(data.text);
                     parent.location.hash = url_hash + temp_id;
                 });
             }
             //click detail
             if (e.target.hash !== undefined) {
-                $.getJSON("http://" + url_hash + e.target.id, function (data) {
+                $.getJSON("//" + url_hash + e.target.id, function (data) {
                     console.log(e.target.hash)
                     $(e.target.hash + " div").text(data.text);
                     parent.location.hash = url_hash + e.target.id;
