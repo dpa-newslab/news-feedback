@@ -1,6 +1,20 @@
-﻿
+﻿# news-feedback
 
-## Dokumentation Datenstruktur 
+news-feedback ist eine Web-Oberfläche, mit der Nutzerfeedback zu automatisch erstellten Nachrichtenpaketen eingesammelt werden kann. Die Software ist Teil des Projektes [News-Stream](http://newsstreamproject.org/).
+
+## Aufruf
+
+https://dpa-newslab.github.io/news-feedback/#(xxxxxxxx)
+
+
+Statt des (xxxxxx) muss die öffentlich zugängliche URL eines Nachrichtenpaket-Bündels angegeben werden. Solche Nachrichtenpaket-Bündel lassen sich zum Beispiel mit dem Script im Verzeichnis `newsbundle-generator` erstellen.
+
+
+## newsbundle-generator
+
+--- tbd ---
+
+## Datenstruktur der Nachrichtenbündel
 
 ### 1. Datenebene
 
