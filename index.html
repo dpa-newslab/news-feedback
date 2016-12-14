@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>News-Stream Branchendienst</title>
+        <link href="./css/bootstrap.min.css" rel="stylesheet">
+        <link href="./css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="./css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+        <link href="./css/theme.css" rel="stylesheet">
+        <link href="./css/style.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body role="document">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">                   
+                    <span class="glyphicon glyphicon-info-sign info" aria-hidden="true"></span>   
+                    <span id="selected"><img class="logo_small" alt="logo" src="./img/image.png"></span>                    
+                    <select class="navbar-select"></select>                   
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse" data-toggle="collapse" data-target=".nav-collapse">
+
+                    <ul class="nav navbar-nav navbar-right">       
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" href="#">
+                                A-C
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">                  
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" href="#">
+                                E-G
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" href="#">
+                                H-L
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" href="#">
+                                M-R
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" href="#">
+                                S-Z
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                            </ul>
+                        </li>
+                    </ul>
+                    <span id="appTitle"></span>  
+                    <span id="selectedBig"> </span> 
+                    <select class="navbar-select"></select> 
+                    <span class="glyphicon glyphicon-info-sign info" aria-hidden="true"></span>
+                </div>
+
+            </div><!--/.navbar-collapse -->
+        </nav>
+
+        <div id="dpa_main" class="container col-md-12" >        
+            <div class="panel-group" id="accordion"></div> 
+            <h3 class="start"></h3>
+        </div>
+        <div id="nav_all">
+            <ul class="nav nav-pills nav-stacked">
+            </ul>
+        </div>
+        <div id="email_btn">
+            <span class="email">Klicken Sie zum Abschluss hier,<br>
+                um Ihr Ergebnis zu verschicken.</span>
+            <a class="btn btn-default btn-xs" href="">
+                <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span> Senden</a>
+        </div>
+
+        <!-- *************************************  -->
+
+        <div id="info-modal" class="modal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">        
+                    <div class="modal-header">     
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                         </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- *************************************  -->
+        <script src="./lib/jquery-1.12.4.min.js"></script>
+        <script src="./lib/bootstrap.min.js"></script>
+        <script src="./js/script.js"></script>
+
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="./lib/ie10-viewport-bug-workaround.js"></script>
+    </body>
+</html>
