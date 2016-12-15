@@ -163,7 +163,7 @@ $(document).ready(function () {
             $("#selected").html(e.target.text);
             $("#selectedBig").html("&nbsp;&bull; " + e.target.text);
             built_page_content(e.target.id);
-            parent.location.hash = url_hash + news_data.news[e.target.id].response.docs[0].document;
+            parent.location.hash = url_hash + news_data.news[e.target.id].docs[0].document;
         });
 
         var temp = "";
@@ -241,7 +241,7 @@ $(document).ready(function () {
         var top_position = 0;
         category = page_id;
 
-        $.each(news_data.news[page_id].response.docs, function (index, value) {
+        $.each(news_data.news[page_id].docs, function (index, value) {
             id_array[value.id] = value.sectors;
             var add_active_UP = "";
             var add_active_DOWN = "";
