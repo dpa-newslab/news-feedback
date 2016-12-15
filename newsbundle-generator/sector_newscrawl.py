@@ -61,11 +61,11 @@ class Config :
 
 
     template={
-      "placeholder": "Anmerkung",
-      "subject": "Branchendienst - Feedback",
+      "placeholder": "Korrekte Branche",
+      "subject": "Branchendienst Newscrawl - Feedback",
       "email": "mvirtel@dpa-newslab.com",
-      "description": "<h2>Anleitung</h2><p>Unser Algorithmus hat sich als Redakteur versucht und Meldungen in BranchenBitte markieren Sie alle Nachrichten, die nicht in die dargestellte Branche passen. <a href='#'>Mehr Informationen zu diesem Experiment</a></p>",
-      "title": "Branchendienst"
+      "description": "<h2>Anleitung</h2><p>Unser Algorithmus hat sich als Redakteur versucht und Meldungen im Internet gesucht, die zu den Branchen passen. Bitte markieren Sie alle Nachrichten, die nicht in die dargestellte Branche passen. <a href='#'>Mehr Informationen zu diesem Experiment</a></p>",
+      "title": "Branchendienst - Newscrawl"
     	}
 
 
