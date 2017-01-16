@@ -44,7 +44,9 @@ def generate(config) :
             nq["fq"].append('sectors:"{0}"'.format(k))
             res=list(neofonie.query("*",**nq)["response"]["docs"] | datapipeline.rename_attributes(config.rename)
                     | pipe.where(config.filter)
-                    | datapipeline.deduplicate(key=lambda a: a["title"] ) )
+                    | datapipeline.deduplicate(key=lambda a: a["title"] )
+                    | datapipeline.default_attributes(('sourcelink','source','subtitle'))
+                )
             logging.debug("Sector: %s - %s - %s docs" % (k,date.strftime("%Y-%m-%d"),len(res)))
             if len(res)>0 :
                 results[k]=dict(docs=res,label=n)

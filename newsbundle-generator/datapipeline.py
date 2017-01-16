@@ -41,6 +41,16 @@ def rename_attributes(iterable,pairs) :
         yield item
 
 
+@pipe.Pipe
+def default_attributes(iterable,attrlist,value="") :
+    for item in iterable :
+        for a in attrlist :
+            if a not in item :
+                item[a]=value
+        yield item
+
+
+
 def test_deduplicate() :
     import copy
     doc=[{'body': 'b', 'title': 'a'},
