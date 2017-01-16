@@ -10,11 +10,12 @@ import datetime
 import json
 from bundler import generate
 from collections import OrderedDict
-
+import os
 logging.basicConfig(stream=sys.stderr,level=logging.DEBUG)
 
 logger=logging.getLogger(__name__)
 
+_HERE=os.path.split(__file__)[0]
 
 # CONFIG
 
@@ -36,12 +37,12 @@ class Config :
 
 
     startdate=datetime.datetime.now()-datetime.timedelta(days=1)
-    days=1
+    days=5
 
-    branchen=json.load(open("branchen.json"),object_pairs_hook=OrderedDict)
+    branchen=json.load(open(os.path.join(_HERE,"branchen.json")),object_pairs_hook=OrderedDict)
 
     rootlabel="Branchennews"
-    directory="../html/data/demo-newscrawl"
+    directory=os.path.join(_HERE,"../html/data/demo-newscrawl")
     rootfile="index.json"
     indexfile="{date:%Y%m%d}-index.json"
     indexlabel="{date:%d. %m. %Y}"
@@ -58,11 +59,12 @@ class Config :
       "placeholder": "Korrekte Branche",
       "subject": "Branchendienst Newscrawl - Feedback",
       "email": "mvirtel@dpa-newslab.com",
-      "description": "<h2>Anleitung</h2><p>Unser Algorithmus hat sich als Redakteur versucht und Meldungen im Internet gesucht, die zu den Branchen passen. Bitte markieren Sie alle Nachrichten, die nicht in die dargestellte Branche passen. <a href='#'>Mehr Informationen zu diesem Experiment</a></p>",
-      "title": "Branchendienst - Newscrawl"
+      "description": "<h2>Anleitung</h2><p>Unser Algorithmus hat sich beim Nachrichtensortieren versucht und Meldungen aus dem deutschen Internet den Branchen von dpa-AFX zugeordnet. <br/> Wie gut hat das geklappt? Das müssen wir mit menschlicher Intelligenz herausfinden. Bitte markieren Sie alle Nachrichten, die nicht in die dargestellte Branche passen, und schreiben Sie ggf. dazu, welche Branche es hätte sein sollen. <!-- <a href=''>Mehr Informationen zu diesem Experiment</a>--> </p>",
+      "title": "News-Stream Branchendienst - Internet",
+
     	}
 
-    filter=lambda a: not re.search(r"\bdpa\b",a["text"])
+    filter=lambda a: not re.search(r"\b(dpa|DGAP-News)\b",a["text"])
 
 
 if __name__=="__main__" :

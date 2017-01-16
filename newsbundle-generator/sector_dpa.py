@@ -8,6 +8,7 @@ import logging
 import re
 import datetime
 import json
+import os
 from bundler import generate
 from collections import OrderedDict
 
@@ -15,7 +16,7 @@ logging.basicConfig(stream=sys.stderr,level=logging.DEBUG)
 
 logger=logging.getLogger(__name__)
 
-
+_HERE=os.path.split(__file__)[0]
 # CONFIG
 
 class Config :
@@ -36,12 +37,12 @@ class Config :
 
 
     startdate=datetime.datetime.now()-datetime.timedelta(days=1)
-    days=1
+    days=5
 
-    branchen=json.load(open("branchen.json"),object_pairs_hook=OrderedDict)
+    branchen=json.load(open(os.path.join(_HERE,"branchen.json")),object_pairs_hook=OrderedDict)
 
     rootlabel="Branchennews dpa"
-    directory="../html/data/demo-dpa"
+    directory=os.path.join(_HERE,"../html/data/demo-dpa")
     rootfile="index.json"
     indexfile="{date:%Y%m%d}-index.json"
     indexlabel="{date:%d. %m. %Y}"
@@ -53,11 +54,11 @@ class Config :
 
 
     template={
-      "placeholder": "Korrekte Branche",
+      "placeholder": "Falsch !",
       "subject": "Branchendienst dpa - Feedback",
       "email": "mvirtel@dpa-newslab.com",
-      "description": "<h2>Anleitung</h2><p>Unser Algorithmus hat sich als Redakteur versucht und Meldungen bei der dpa gesucht, die zu den Branchen passen. Bitte markieren Sie alle Nachrichten, die nicht in die dargestellte Branche passen. <a href='#'>Mehr Informationen zu diesem Experiment</a></p>",
-      "title": "Branchendienst - dpa"
+      "description": "<h2>Anleitung</h2><p>Unser Algorithmus hat sich beim Nachrichtensortieren versucht und Meldungen bei der dpa den Branchen von dpa-AFX zugeordnet. <br/> Wie gut hat das geklappt? Das müssen wir mit menschlicher Intelligenz herausfinden. Bitte markieren Sie alle Nachrichten, die nicht in die dargestellte Branche passen, und schreiben Sie ggf. dazu, welche Branche es hätte sein sollen. <!-- <a href=''>Mehr Informationen zu diesem Experiment</a>--> </p>",
+      "title": "News-Stream Branchendienst - dpa"
     	}
 
     filter=lambda a: not re.search(r"\bdpa-AFX\b",a["text"])
