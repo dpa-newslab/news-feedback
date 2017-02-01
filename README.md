@@ -9,6 +9,18 @@ https://dpa-newslab.github.io/news-feedback/#(xxxxxxxx)
 
 Statt des (xxxxxx) muss die öffentlich zugängliche URL eines Nachrichtenpaket-Bündels angegeben werden. Solche Nachrichtenpaket-Bündel lassen sich zum Beispiel mit dem Script im Verzeichnis `newsbundle-generator` erstellen.
 
+### Beispiele
+
+Diese Beispiele sind Passwortgeschützt. Das Passwort ist über die üblichen Wege verfügbar.
+
+
+  - Aktuelle Branchennews aus der dpa-Berichterstattung:
+    https://werkzeugkasten.dpa-newslab.com/newsstream-branchen/#werkzeugkasten.dpa-newslab.com/newsstream-branchen/data/demo-dpa
+  
+  
+  - Aktuelle Branchennews aus dem Neofonie Newscrawl:
+    https://werkzeugkasten.dpa-newslab.com/newsstream-branchen/#werkzeugkasten.dpa-newslab.com/newsstream-branchen/data/demo-dpa
+
 
 ## newsbundle-generator
 
