@@ -24,6 +24,9 @@ remote :
 	expect -c 'spawn ssh $(SERVER); send "cd $(REMOTE_HOME);  tmux new-session -s $(PROJECT) || tmux attach -t $(PROJECT)\r"; interact '
 
 
+bundles :
+	python newsbundle-generator/sector_newscrawl.py
+	python newsbundle-generator/sector_dpa.py
 
 # call like this:
 # $(call check_defined, DB_HOST DB_USER DB_PASSWORD DB_DATABASE, 'Not all DB parameters defined.')
