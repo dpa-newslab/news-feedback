@@ -12,7 +12,8 @@ import os
 from bundler import generate
 from collections import OrderedDict
 
-logging.basicConfig(stream=sys.stderr,level=logging.DEBUG)
+logging.basicConfig(stream=sys.stderr,level=logging.DEBUG,
+                    format='%(levelname)s %(filename)s:%(lineno)s %(message)s')
 
 logger=logging.getLogger(__name__)
 
@@ -28,7 +29,7 @@ class Config :
     basequery=dict( fq=[ 'sourceId:"dpa"',
                          'language:"de"' ],
                 wt="json",
-                rows=10,
+                rows=190,
                 sort="createdAt desc",
                 omitHeader="true",
                 fl="createdAt,dpaId,dpaTitle,id,sectors,dpaText")
@@ -61,8 +62,8 @@ class Config :
       "title": "News-Stream Branchendienst - dpa"
     	}
 
-    filter=lambda a: not re.search(r"\bdpa-AFX\b",a["text"])
-
+    filter=lambda a: not re.search(r"dpa-AFX|DGAP",a.get("title")+a.get("text")) \
+                     and not re.search(r"\s*\*",a["title"])
 
 if __name__=="__main__" :
     generate(Config)

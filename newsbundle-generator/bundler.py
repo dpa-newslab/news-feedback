@@ -13,7 +13,8 @@ import datetime
 import logging
 from functools import reduce
 
-logging.basicConfig(stream=sys.stderr,level=logging.DEBUG)
+# logging.basicConfig(stream=sys.stderr,level=logging.DEBUG,
+#                    format='%(levelname)s %(filename)s:%(lineno)s %(message)s')
 
 logger=logging.getLogger(__name__)
 
@@ -26,6 +27,11 @@ def mkdirs_and_open(f,*args) :
     if not os.path.exists(p) :
         os.makedirs(p)
     return open(f,*args)
+
+
+def add_sectors_to_subtitle(item) :
+    item["subtitle"]="[{}] {subtitle}".format(",".join(item["sectors"]),**item)
+    return item
 
 
 def generate(config) :
@@ -41,13 +47,16 @@ def generate(config) :
         dayquery["fq"].append(date.strftime('createdAt:[%Y-%m-%dT00:00:00.000Z TO %Y-%m-%dT23:59:59.999Z]'))
         for (k,n) in config.branchen.items() :
             nq=copy.deepcopy(dayquery)
-            nq["fq"].append('sectors:"{0}"'.format(k))
+            nq["fq"].append('+sectors:"{0}"'.format(k))
             res=list(neofonie.query("*",**nq)["response"]["docs"] | datapipeline.rename_attributes(config.rename)
                     | pipe.where(config.filter)
                     | datapipeline.deduplicate(key=lambda a: a["title"] )
                     | datapipeline.default_attributes(('sourcelink','source','subtitle'))
+                    | datapipeline.call(add_sectors_to_subtitle)
                 )
             logging.debug("Sector: %s - %s - %s docs" % (k,date.strftime("%Y-%m-%d"),len(res)))
+            for item in res :
+                logging.debug("     %s %s %s" % (item["sectors"],item["title"],item["text"][:30]))
             if len(res)>0 :
                 results[k]=dict(docs=res,label=n)
         for nr in results.values() :
@@ -64,7 +73,6 @@ def generate(config) :
                 texts[os.path.join(config.directory,filename)]=ndoc
                 if "text" in doc :
                     del(doc["text"])
-
         with mkdirs_and_open(os.path.join(config.directory,indexfilename),"w") as of :
             json.dump(dict(news=results,root=config.rootfile,rootlabel=config.rootlabel),of)
             logging.info("%s items written to %s" %

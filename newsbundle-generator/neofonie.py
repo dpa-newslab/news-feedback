@@ -14,7 +14,7 @@ import collections
 import datapipeline
 
 
-logging.basicConfig(level=logging.DEBUG,stream=sys.stderr)
+# logging.basicConfig(level=logging.DEBUG,stream=sys.stderr)
 logging.getLogger("requests").setLevel(logging.ERROR)
 logger=logging.getLogger(__name__)
 
@@ -47,6 +47,7 @@ def query(q,**kwargs) :
         q="{0}&{1}".format(q,urllib.parse.urlencode(tuple(sequentialize(kwargs))))
     url="{0}{1}".format(prefix,q)
     response = requests.get(url,auth=(auth["login"],auth["password"]))
+    logger.debug("Query: {}".format(urllib.parse.unquote(url)))
     if not response.ok :
         raise RuntimeError("get_json: {url}\n{response.status_code} : {response.reason}\n{response.text}".format(**locals()))
     return response.json()

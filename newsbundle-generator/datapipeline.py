@@ -49,6 +49,10 @@ def default_attributes(iterable,attrlist,value="") :
                 item[a]=value
         yield item
 
+@pipe.Pipe
+def call(iterable,funct) :
+    for item in iterable :
+        yield funct(item)
 
 
 def test_deduplicate() :

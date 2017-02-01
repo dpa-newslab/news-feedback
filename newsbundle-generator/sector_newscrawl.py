@@ -28,7 +28,7 @@ class Config :
     basequery=dict( fq=[ 'sourceId:"neofonie"',
                          'language:"de"' ],
                     wt="json",
-                    rows=10,
+                    rows=190,
                     sort="createdAt desc",
                     omitHeader="true",
                     fl="createdAt,neoTeaser,neoTitle,neoUrl,id,neoApplication,sectors,text,neoBaseUrl")
