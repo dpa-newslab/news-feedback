@@ -11,7 +11,7 @@ Statt des (xxxxxx) muss die öffentlich zugängliche URL eines Nachrichtenpaket-
 
 ### Beispiele
 
-Diese Beispiele sind Passwortgeschützt. Das Passwort ist über die üblichen Wege verfügbar.
+Diese Beispiele sind Passwortgeschützt. Das Passwort ist über [den üblichen Weg](https://jira.neofonie.de/browse/NSTR-609) verfügbar.
 
 
   - Aktuelle Branchennews aus der dpa-Berichterstattung:
