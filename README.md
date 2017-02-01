@@ -15,11 +15,11 @@ Diese Beispiele sind Passwortgeschützt. Das Passwort ist über die üblichen We
 
 
   - Aktuelle Branchennews aus der dpa-Berichterstattung:
-    https://werkzeugkasten.dpa-newslab.com/newsstream-branchen/#werkzeugkasten.dpa-newslab.com/newsstream-branchen/data/demo-dpa
+    https://werkzeugkasten.dpa-newslab.com/newsstream-branchen/#werkzeugkasten.dpa-newslab.com/newsstream-branchen/data/demo-dpa/
   
   
   - Aktuelle Branchennews aus dem Neofonie Newscrawl:
-    https://werkzeugkasten.dpa-newslab.com/newsstream-branchen/#werkzeugkasten.dpa-newslab.com/newsstream-branchen/data/demo-dpa
+    https://werkzeugkasten.dpa-newslab.com/newsstream-branchen/#werkzeugkasten.dpa-newslab.com/newsstream-branchen/data/demo-newscrawl/
 
 
 ## newsbundle-generator
